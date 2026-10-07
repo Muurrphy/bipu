@@ -1,12 +1,14 @@
 # Expressive Arm · 机械臂情绪表达
 
-用于 SO-101 的八条表达动作，附带轨迹数据和动作录制工具。
+一个用动作表达情绪的 SO-101 小玩具。
 
 [English README](README.md) · [观看实拍](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/) · [下载 v0.2.0](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0)
 
 ![SO-101 的八种表达](docs/eight-expressions.jpg)
 
-项目受到 Apple [ELEGNT 台灯机器人研究（2025）](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement)启发，将表达性运动应用于 SO-101。八条动作由刘美辰设计。本仓库包含独立编写的程序和录制数据，与 Apple 没有隶属关系。
+我觉得苹果的 [ELEGNT 台灯机器人](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement)很可爱，家里刚好有一台 SO-101，也想试着做一个。于是做了这个用动作表达情绪的小玩具，只是为了好玩，也希望给其他机械臂玩家添一点乐趣。这里分享八条动作的轨迹和录制工具，方便大家参考或改编。
+
+目前只在我自己的 SO-101 上试过，其他设备需要按各自的配置调整。
 
 ## 可以用来做什么
 

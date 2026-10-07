@@ -1,6 +1,6 @@
 # Expressive Arm
 
-Eight expressive motion clips for a SO-101 robot arm, with reusable trajectories and tools for recording your own.
+A little SO-101 toy that expresses emotions through movement.
 
 [中文 README](README.zh-CN.md) · [Watch the demonstrations](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/) · [Download v0.2.0](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0)
 
@@ -9,7 +9,9 @@ Eight expressive motion clips for a SO-101 robot arm, with reusable trajectories
 
 ![Eight expressions performed on a SO-101](docs/eight-expressions.jpg)
 
-Inspired by Apple's [ELEGNT lamp robot research (2025)](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement), this project applies expressive movement to a SO-101 arm. The eight motions were created by Meichen Liu. The repository contains independent code and recordings; it is not affiliated with Apple.
+I found Apple's [ELEGNT lamp robot](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement) really cute. I had an SO-101 at home and wanted to try something similar, just for fun. This little toy uses movement to express eight emotions. I’m sharing the trajectories and recording tools in case they add a bit of fun to someone else’s robot arm.
+
+So far, I’ve only tested it on my own SO-101. Other setups will need some adjustment.
 
 ## What you can use it for
 
