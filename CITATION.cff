@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software or motion data, please cite this release."
+title: "Expressive Arm: Eight SO-101 Motion Expressions"
+type: software
+authors:
+  - family-names: Liu
+    given-names: Meichen
+version: 0.2.0
+date-released: '2026-10-07'
+license: MIT
+url: "https://github.com/Muurrphy/expressive-arm"
+repository-code: "https://github.com/Muurrphy/expressive-arm"
+keywords:
+  - robotics
+  - human-robot interaction
+  - expressive movement
+  - SO-101

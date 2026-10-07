@@ -27,4 +27,4 @@ def find_recording_expression(name: str) -> dict:
 
 if __name__ == "__main__":
     for index, item in enumerate(read_repertoire()["expressions"], 1):
-        print(f"{index:02d}. {item['name']} ({item['id']}) — {item['intent']}")
+        print(f"{index:02d}. {item['name']} ({item['id']})")

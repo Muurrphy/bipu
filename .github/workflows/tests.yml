@@ -1,5 +1,7 @@
 name: Offline checks
 on: [push, pull_request]
+permissions:
+  contents: read
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -15,3 +17,31 @@ jobs:
       - run: expressive-arm validate
       - run: python -m unittest discover -s tests -v
       - run: cd tools/recording && python -m unittest test_motion_library test_human_workflow -v
+  packages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install build twine
+      - run: python -m build
+      - run: python -m twine check dist/*
+      - name: Check installed wheel outside the source tree
+        run: |
+          python -m venv /tmp/arm-wheel
+          /tmp/arm-wheel/bin/python -m pip install dist/*.whl
+          cd /tmp
+          /tmp/arm-wheel/bin/expressive-arm validate
+          /tmp/arm-wheel/bin/expressive-arm export curious --output curious.csv
+          /tmp/arm-wheel/bin/python -c 'from expressive_arm import __version__; assert __version__ == "0.2.0"'
+      - name: Check installed source distribution outside the source tree
+        run: |
+          python -m venv /tmp/arm-source
+          /tmp/arm-source/bin/python -m pip install dist/*.tar.gz
+          cd /tmp
+          /tmp/arm-source/bin/expressive-arm validate
+      - uses: actions/upload-artifact@v4
+        with:
+          name: python-distributions
+          path: dist/*

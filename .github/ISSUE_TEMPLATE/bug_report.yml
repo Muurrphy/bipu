@@ -1,0 +1,30 @@
+name: Bug report
+description: Report a reproducible problem in data or tooling.
+title: "[Bug] "
+body:
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps and commands to reproduce
+      description: Include a minimal example; do not include personal paths or credentials.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Expected and actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Release, OS, Python version. For hardware, model, LeRobot/SDK version and calibration conventions; omit serial numbers and calibration files.
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant output
+      description: Remove private information before posting.
+      render: text

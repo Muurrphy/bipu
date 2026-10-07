@@ -1,15 +1,24 @@
-# How the performances were made
+# Authoring and validation
 
-1. Explore with a leader arm while recording several minutes continuously. Early attempts can be rough.
-2. Pause in the air between attempts. A pause need not be the neutral pose or a return to the table.
-3. Select the last complete or penultimate performance. Remove leading/trailing idle time and the final parking motion while preserving intentional pauses.
-4. Prepare smoothly, replay on the follower, and have the choreographer confirm the selection.
-5. Archive the confirmed trajectory and its story, then film it. Film timing and motion timing are separate records.
+Motion data was recorded from a SO-101 leader/follower setup. Each selected clip was replayed and confirmed on the author's follower. The public library contains eight selected clips; earlier generated templates remain in the separate recording tools for comparison and are not part of the eight-clip library.
 
-Automatic motion designs produced uneven results in the real object. Human choreography gave better control over the degree and meaning of each gesture. The sleepy performance includes briefly recovering from drowsiness before gradually shrinking into sleep. The sad and angry performances retain their turns away from the observer. The happy performance removes a forward dive and the closing crouch because those did not fit its intended meaning.
+## Workflow
 
-Two control issues mattered. A damped tracking filter added a noticeable delay, so direct following became the default. An initial relative offset prevented the leader and follower from reaching the same shoulder pose, so absolute calibrated-angle mapping became the default. The tools retain relative/smooth modes as explicit options rather than silent defaults.
+1. Continuously record leader-following targets and follower measurements.
+2. Select explicit time bounds. Keep intentional pauses within a clip; exclude idle time outside it and the separate parking motion.
+3. Prepare the follower to the clip's starting pose, replay, and check the selection.
+4. Archive the accepted trajectory and film the demonstration separately.
 
-Briefly stopping after each tiny preparation step made motion feel staccato. Preparation instead uses one continuous quintic trajectory. Existing calibration and servo configuration are read and checked; the recording tools do not automatically rewrite them. Leader/follower range differences are still real hardware constraints.
+The happy clip has two removed intervals joined by generated transitions. Its historical `observed` samples at those joins are not measurements of the generated transition. The motion JSONL files and edited films are not a synchronized training dataset.
 
-The final films use daytime fixed framing. A Pocket 3 moving-camera session was abandoned because the available light was insufficient. Labels help present the performances; future recognition studies should also use versions without labels.
+## Control choices
+
+Default tracking is direct, with absolute calibrated-angle mapping. A damped filter produced noticeable following delay during authoring; relative mapping preserved an unwanted initial joint offset. These alternatives remain explicit options, not defaults. Preparation uses a continuous quintic trajectory rather than a series of small stops.
+
+The tools read cached calibration and servo configuration without automatically rewriting them. Command ranges are checked. Measured positions can differ slightly from commanded targets near a limit; the controller distinguishes its inward command margin from the calibration range. Different arm builds still require their own validation.
+
+## Evidence and limits
+
+The included clips were demonstrated on one SO-101 setup. Offline tests cover data integrity and controller behavior with fake hardware; they do not prove physical performance on another arm. The linked films are daytime fixed-camera demonstrations.
+
+No blind audience recognition study has been run. A future study could randomize unlabeled clips, collect free descriptions and label choices, and report confusion between expressions. The eight labels currently indicate intended expression, not measured recognition accuracy.

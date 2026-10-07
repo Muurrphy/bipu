@@ -1,8 +1,6 @@
 {
   "version": 1,
-  "selected_on": "2026-10-06",
   "authoring": "human_teleoperation",
-  "selection_rule": "优先选择含义明确、展示好看的表达；无聊、欢迎、再见已取消；邀请由玩耍复合片段覆盖。",
   "expressions": [
     {
       "id": "sleepy",
@@ -11,7 +9,6 @@
         "困",
         "困了"
       ],
-      "intent": "有点撑不住，想睡了。",
       "confirmed_display_name": "困倦"
     },
     {
@@ -20,7 +17,6 @@
       "aliases": [
         "玩"
       ],
-      "intent": "自己玩，推方块试探，再把蓝块搭到红块上；成功后邀请来看，失败时求助。",
       "confirmed_display_name": "玩耍",
       "covered_expressions": [
         "playful",
@@ -42,7 +38,6 @@
         "affirmative",
         "开心／肯定"
       ],
-      "intent": "转向人，像小狗一样左右歪头；点两下头表示肯定；随后转身左右摇摆，表现开心。已删除点头之后的俯冲，结尾停在开心晃动结束的位置，不蜷缩收束。",
       "semantic_tags": [
         "happy",
         "affirmative"
@@ -57,13 +52,7 @@
         "伤心",
         "难过"
       ],
-      "intent": "先有点欲言又止；随后难过地转过身去，独自低着头，情绪低落。",
-      "confirmed_display_name": "失落",
-      "story_beats": [
-        "有点欲言又止。",
-        "难过地转过身去。",
-        "独自低着头，情绪低落。"
-      ]
+      "confirmed_display_name": "失落"
     },
     {
       "id": "fearful",
@@ -76,7 +65,6 @@
         "surprised",
         "害怕／震惊"
       ],
-      "intent": "用户编舞的一段连续复合动作，同时表达害怕和震惊。",
       "semantic_tags": [
         "fearful",
         "shocked"
@@ -98,7 +86,6 @@
         "angry",
         "不高兴／生气"
       ],
-      "intent": "表现生气、不高兴、闹脾气；最后背对着人，保持这个收尾姿态。",
       "confirmed_display_name": "生气",
       "semantic_tags": [
         "angry",
@@ -110,52 +97,19 @@
       "id": "curious",
       "name": "好奇",
       "aliases": [],
-      "intent": "发现新东西，想凑近弄明白。",
       "confirmed_display_name": "好奇"
     },
     {
       "id": "hesitant",
       "name": "犹豫",
       "aliases": [],
-      "intent": "想行动，又拿不定主意。",
       "confirmed_display_name": "犹豫"
     },
     {
       "id": "inviting",
       "name": "邀请",
       "aliases": [],
-      "intent": "主动请你靠近，或一起做件事。",
-      "covered_by": "playful",
-      "coverage_condition": "已确认复合动作中，搭放成功后的兴奋邀请。"
-    }
-  ],
-  "excluded_expressions": [
-    {
-      "id": "bored_mischievous",
-      "name": "无聊／叹气",
-      "removed_at": "2026-10-06T05:38:09.293491-04:00",
-      "reason": "用户取消无聊：含义不明确、展示效果不足，不再继续制作；后续优先含义明确且好看的动作。"
-    },
-    {
-      "id": "welcoming",
-      "name": "欢迎",
-      "status": "canceled_by_user",
-      "removed_at": "2026-10-06T05:48:37.103290-04:00",
-      "reason": "用户明确取消，认为欢迎和再见没有必要。"
-    },
-    {
-      "id": "farewell",
-      "name": "再见",
-      "status": "canceled_by_user",
-      "removed_at": "2026-10-06T05:48:37.103290-04:00",
-      "reason": "用户明确取消，认为欢迎和再见没有必要。"
-    },
-    {
-      "id": "comforting",
-      "name": "安慰",
-      "status": "canceled_by_user",
-      "removed_at": "2026-10-06T07:26:19.460888-04:00",
-      "reason": "用户认为与犹豫相似，取消录制；好奇是本轮最后一个。"
+      "covered_by": "playful"
     }
   ],
   "primary_showcase": [

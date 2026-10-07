@@ -1,0 +1,17 @@
+name: Feature or hardware adapter
+description: Propose a concrete improvement or a port to another arm.
+title: "[Proposal] "
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case and proposed change
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Compatibility and validation plan
+      description: For a hardware port, describe model, SDK, units, limits and how you will verify playback. Distinguish tested behavior from a proposal.
+    validations:
+      required: true

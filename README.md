@@ -1,55 +1,93 @@
 # Expressive Arm
 
-Eight expressions performed by a SO-ARM101 — through posture, orientation, timing and pauses.
+Eight expressive motion clips for a SO-101 robot arm, with reusable trajectories and tools for recording your own.
 
-[中文说明](README.zh-CN.md) · [Watch all eight films](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/) · [Portfolio](https://muurrphy.github.io/desktop-robot-murphy-demo/portfolio/)
+[中文 README](README.zh-CN.md) · [Watch the demonstrations](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/) · [Download v0.2.0](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0)
 
-![Eight expressions](docs/eight-expressions.jpg)
+[![Offline checks](https://github.com/Muurrphy/expressive-arm/actions/workflows/tests.yml/badge.svg)](https://github.com/Muurrphy/expressive-arm/actions/workflows/tests.yml)
+[![License: MIT](https://img.shields.io/badge/code%20%26%20motion%20data-MIT-blue.svg)](LICENSE)
 
-The motion was choreographed by Meichen Liu using a leader arm. AI assisted with continuous recording, troubleshooting, trimming and tooling. Each selected performance was replayed on the follower and confirmed before being archived. The project was inspired by Apple's ELEGNT lamp research.
+![Eight expressions performed on a SO-101](docs/eight-expressions.jpg)
 
-| Expression | What the performance explores |
-| --- | --- |
-| Sleepy / 困倦 | Struggling to stay awake, briefly recovering, then curling into sleep |
-| Disappointed / 失落 | Hesitating to speak, turning away and lowering the head |
-| Hesitant / 犹豫 | Moving toward an action while remaining undecided |
-| Happy / 开心 | Puppy-like head tilts, affirmative nods and a turning sway |
-| Startled / 震惊 | One continuous performance with fear and surprise |
-| Curious / 好奇 | Turning toward and exploring something unfamiliar |
-| Playful / 玩耍 | Probing and stacking blocks, then inviting attention or asking for help |
-| Angry / 生气 | Sulking and ending with the back turned toward the observer |
+Inspired by Apple's [ELEGNT lamp robot research (2025)](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement), this project applies expressive movement to a SO-101 arm. The eight motions were created by Meichen Liu. The repository contains independent code and recordings; it is not affiliated with Apple.
 
-## Start without hardware
+## What you can use it for
+
+- **SO-101 interaction prototypes:** add a motion response to an event in your own application, after checking the motion on your calibrated setup.
+- **Motion authoring:** record with a leader arm, select a take, preview joint trajectories, and replay a clip on a follower.
+- **Other robot arms or animation:** export timestamped joint targets to CSV and adapt the choreography to your own model. Different kinematics require retargeting.
+- **Teaching and HRI experiments:** use a small, inspectable motion library as a starting point for movement design or a future perception study.
+
+## Motion library
+
+| ID | Chinese label | Trajectory duration | Frames | Demonstration |
+| --- | --- | ---: | ---: | --- |
+| `sleepy` | 困倦 | 31.37 s | 1,618 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/sleepy.mp4) |
+| `disappointed` | 失落 | 12.00 s | 630 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/disappointed.mp4) |
+| `hesitant` | 犹豫 | 15.52 s | 805 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/hesitant.mp4) |
+| `happy` | 开心 | 11.69 s | 620 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/happy.mp4) |
+| `startled` | 震惊 | 10.83 s | 566 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/startled.mp4) |
+| `curious` | 好奇 | 16.63 s | 780 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/curious.mp4) |
+| `playful` | 玩耍 | 41.85 s | 2,010 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/playful.mp4) |
+| `angry` | 生气 | 23.04 s | 1,199 | [Video](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/media/angry.mp4) |
+
+The durations above describe motion data. Edited films have different durations and are not frame-synchronized datasets. Emotion labels describe the intended expression; no audience recognition study has been conducted. The playful clip uses blocks at fixed locations and has no object detection or autonomous success/failure logic.
+
+## Quick start: no robot required
+
+Python 3.10 or later. The offline package has no runtime dependencies and does not access serial ports.
 
 ```sh
+git clone https://github.com/Muurrphy/expressive-arm.git
+cd expressive-arm
+python -m venv .venv
+# macOS / Linux:
+source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install .
 expressive-arm list
-expressive-arm inspect sleepy
 expressive-arm validate
+expressive-arm inspect curious
 expressive-arm plot curious --output curious.svg
+expressive-arm export curious --output curious.csv
 expressive-arm crop curious --start 2 --end 8 --output curious-cut.jsonl
 ```
 
-The package uses the Python standard library and never opens a serial port. The wheel includes all eight trajectories and their checksums. `t` is seconds relative to the selected performance; the five body joints use calibrated degrees and the gripper uses 0–100 percent. Film durations differ from motion durations because the edited films include pauses and camera lead-in/out.
+The [release](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0) also provides a wheel, source distribution, full repository ZIP, and SHA-256 checksums. To use a downloaded wheel: `python -m pip install ./expressive_arm-0.2.0-py3-none-any.whl`. This package has not been published to PyPI.
 
-## Record and replay on a real SO-101
+In Python:
 
-The implementation used for these performances is in [tools/recording](tools/recording). It supports a single persistent follower connection, direct absolute-angle leader following, append-only recording, hold, smooth preparation and replay. Device ports and cached calibration IDs must be supplied by the operator. See [the recording guide](docs/recording.md) and [hardware notes](docs/hardware.md).
+```python
+from expressive_arm.trajectory import load
 
-The recording tools were tested on macOS, Python 3.12 and LeRobot 0.6.0. Offline tools are tested in CI on Linux. Other operating systems and robot variants have not been validated.
-
-## Method and scope
-
-See [the making process](docs/method.md), [data format](docs/data-format.md) and [research references](docs/references.md). These are author-confirmed performances, not a validated universal emotion classifier. No audience recognition study has been run. The arm is not translating sign language; sign language was studied as a reference for visual communication.
-
-## Development
-
-```sh
-PYTHONPATH=src python -m unittest discover -s tests -v
-cd tools/recording
-python -m unittest test_motion_library test_human_workflow -v
+rows = load("curious")  # verifies checksum and schema
+first_time = rows[0]["t"]
+first_target = rows[0]["action"]
 ```
 
-Code and motion data: MIT. Demonstration films and photographs: © 2026 Meichen Liu, linked for viewing; they are not covered by the software license. Third-party dependencies retain their own licenses. No Apple code or Apple assets are included.
+See [the offline integration example](examples/read_motion.py) and [data format](docs/data-format.md). Five joint channels are calibrated degrees; `gripper.pos` is opening percent (0–100). These are joint targets, not Cartesian poses.
 
-The recording tools also retain the early AI-generated reference catalog for offline comparison. Those 25 templates are not the eight confirmed performances in the package.
+## Hardware compatibility
+
+| Setup | Status | Path |
+| --- | --- | --- |
+| SO-101 leader/follower, Feetech servos | Tested on the author's hardware | [Recording and replay](docs/recording.md) |
+| Other SO-101 builds or calibration | Needs local validation | Check frames, signs, ranges, starting pose and clearance |
+| SO-100 or other brands | No hardware validation or driver supplied | [Porting guide](docs/porting.md) |
+| Offline tools | Linux CI: Python 3.10 / 3.12 / 3.13; local macOS checks | CLI and Python API |
+
+Hardware tools are in `tools/recording`, separate from the offline package. Tested hardware environment: macOS, Python 3.12, LeRobot 0.6.0. The tools use one persistent follower connection, direct following of absolute calibrated leader angles, continuous recording, and explicit prepare/replay/hold commands. They require your own cached calibration IDs and ports. Windows hardware control is not supported.
+
+Start with the [hardware notes](docs/hardware.md), then the [recording guide](docs/recording.md). The SO-101-specific preparation path and shutdown behavior must be reviewed for your setup. Finishing a take or closing the controller **does not disable motor torque**. A new arm is not validated by passing offline checks.
+
+## Contributing and support
+
+[CONTRIBUTING.md](CONTRIBUTING.md) explains development, motion submissions, and hardware ports. Use [Discussions](https://github.com/Muurrphy/expressive-arm/discussions) for usage questions and demonstrations; use [Issues](https://github.com/Muurrphy/expressive-arm/issues) for reproducible bugs or concrete proposals. Contributions to other arm models should include an adapter, configuration, and a test report.
+
+For the upstream SO-101 / LeRobot community, see the [official hardware repository](https://github.com/TheRobotStudio/SO-ARM100) and its [LeRobot Discord link](https://discord.gg/ggrqhPTsMe). Expressive Arm is an independent project, not an official LeRobot component.
+
+## License, attribution and scope
+
+Code, documentation text and motion JSON/JSONL data are [MIT licensed](LICENSE). You can modify and redistribute them, including for commercial use, while retaining the license notice. The repository's photographs and linked demonstration films are copyrighted by Meichen Liu and are **not** covered by MIT; see [media licensing](docs/media-license.md).
+
+Use [CITATION.cff](CITATION.cff) when citing this release. Research inspiration is listed in [references](docs/references.md). The clips are scripted performances, not an emotion classifier, manipulation policy, or sign-language translator. See [authoring and validation notes](docs/method.md) and [CHANGELOG.md](CHANGELOG.md).

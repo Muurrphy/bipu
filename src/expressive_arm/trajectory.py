@@ -79,3 +79,16 @@ def plot(name,path):
         svg.append(f'<polyline points="{points}" fill="none" stroke="#D71932" stroke-width="1.6"/>')
     svg.append(f'<text x="{left}" y="745" font-family="monospace" font-size="12">0 s</text><text x="{right-70}" y="745" font-family="monospace" font-size="12">{duration:.2f} s</text></svg>')
     Path(path).write_text('\n'.join(svg),encoding='utf-8')
+
+
+def export_csv(name, path):
+    """Export targets only, retaining recorded seconds and all six channel units."""
+    import csv
+    rows = load(name)
+    output = Path(path)
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("w", encoding="utf-8", newline="") as stream:
+        writer = csv.writer(stream)
+        writer.writerow(("t", *JOINTS))
+        for row in rows:
+            writer.writerow((row["t"], *(row["action"][key] for key in JOINTS)))
