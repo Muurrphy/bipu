@@ -1,0 +1,13 @@
+__pycache__/
+*.py[cod]
+.venv/
+dist/
+build/
+*.egg-info/
+.DS_Store
+tools/recording/runtime/
+tools/recording/human_runtime/
+tools/recording/人工编舞/
+*.log
+*.env
+calibration/

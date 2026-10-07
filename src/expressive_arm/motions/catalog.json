@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "units": {
+    "body_joints": "calibrated degrees (five joints)",
+    "gripper": "opening percent, 0..100"
+  },
+  "method": "Human teleoperation, continuous recording, semantic trimming and author-confirmed replay.",
+  "expressions": [
+    {
+      "id": "sleepy",
+      "name": "困倦",
+      "file": "sleepy.jsonl",
+      "frames": 1618,
+      "duration_s": 31.369989583967254,
+      "sha256": "d13fc82f34c1179f27dc51d4bcccdbc01d7fae378f650c7a424c876265f830ef",
+      "story": "先犯困，像上课打小差：低了一下头，又赶紧清醒过来。随后困意再次上来，慢慢低头、缩下身子，最后窝在那里睡着。",
+      "semantic_tags": [
+        "sleepy"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "disappointed",
+      "name": "失落",
+      "file": "disappointed.jsonl",
+      "frames": 630,
+      "duration_s": 12.001355417072773,
+      "sha256": "d2d070d62b2dc40f189fe9644fe20aa30e9adf616e1ee0a5ae0ba8c56b38aea1",
+      "story": "先有点欲言又止；随后难过地转过身去，独自低着头，情绪低落。",
+      "semantic_tags": [
+        "sad",
+        "disappointed"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "hesitant",
+      "name": "犹豫",
+      "file": "hesitant.jsonl",
+      "frames": 805,
+      "duration_s": 15.52331699989736,
+      "sha256": "007db22dc4b7785ceb0c3bac581c6ad3194dc82d0a3cfbbe311772b547bdc9df",
+      "story": "用户纠正本次只有完整一遍，不按重复动作分段；从20.282秒抬起并展开完成后、首次动作前开始，连续保留到35.805秒完整收尾首次停稳。仅排除前面的抬起准备、后面等待及49秒后放回桌面步骤，内部动作与停顿全部保留。",
+      "semantic_tags": [
+        "hesitant"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "happy",
+      "name": "开心",
+      "file": "happy.jsonl",
+      "frames": 620,
+      "duration_s": 11.694082333100958,
+      "sha256": "6c78d94b10e9b11de9cfeb8d3dbb2f1ae3b5e9b9fe59d6f7b0052e6d780612db",
+      "story": "转向人，像小狗一样左右歪头；点两下头表示肯定；随后转身左右摇摆，表现开心。已删除点头之后的俯冲，结尾停在开心晃动结束的位置，不蜷缩收束。",
+      "semantic_tags": [
+        "happy",
+        "affirmative"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "startled",
+      "name": "震惊",
+      "file": "startled.jsonl",
+      "frames": 566,
+      "duration_s": 10.82624000008218,
+      "sha256": "d3c3c4b166b1dfda857bbad191f982b907ebcb3205482fb4caccf64d1f443271",
+      "story": "用户说明为一段复合动作，两个含义。取末尾37至41秒空中停顿后开始的最后一遍，从40.980秒至51.806秒完整收尾首次停稳；内部停顿、夹爪及末尾调整全部保留，仅排除之后等待及59.2秒后的回桌操作。候选待用户回放确认。",
+      "semantic_tags": [
+        "fearful",
+        "shocked"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "curious",
+      "name": "好奇",
+      "file": "curious.jsonl",
+      "frames": 780,
+      "duration_s": 16.633312500081956,
+      "sha256": "32e9f844f7a01675cacc2df68caa30e30e02cd402cc48fcf77afc0e7d6b8049f",
+      "story": "用户亲手编舞并回放确认的好奇动作；保留最后完整一遍，不额外编造具体场景。",
+      "semantic_tags": [
+        "curious"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "playful",
+      "name": "玩耍",
+      "file": "playful.jsonl",
+      "frames": 2010,
+      "duration_s": 41.85408533294685,
+      "sha256": "c2f6c2a1df8e24897631d53abf5590dce16aedd8ecd9f0465a2bff6a79ccdf62",
+      "story": "从末尾447.24至451.8秒空中停顿后的第一次运动开始，到493.8秒左右首次到达稳定最终姿态结束；排除最终等待及502.8秒后放回桌面的归位步骤，动作内部停顿和节奏保留。",
+      "semantic_tags": [
+        "playful"
+      ],
+      "confirmed": true
+    },
+    {
+      "id": "angry",
+      "name": "生气",
+      "file": "angry.jsonl",
+      "frames": 1199,
+      "duration_s": 23.040612583979964,
+      "sha256": "0c99fd89b391ebb48587adb9f92c24205ee62c87ab748226341fa5c27d502243",
+      "story": "表现生气、不高兴、闹脾气；最后背对着人，保持这个收尾姿态。",
+      "semantic_tags": [
+        "angry",
+        "displeased",
+        "sulking"
+      ],
+      "confirmed": true
+    }
+  ]
+}
