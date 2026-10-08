@@ -92,4 +92,4 @@ For the upstream SO-101 / LeRobot community, see the [official hardware reposito
 
 Code, documentation text and motion JSON/JSONL data are [MIT licensed](LICENSE). You can modify and redistribute them, including for commercial use, while retaining the license notice. The repository's photographs and linked demonstration films are copyrighted by Meichen Liu and are **not** covered by MIT; see [media licensing](docs/media-license.md).
 
-Use [CITATION.cff](CITATION.cff) when citing this release. Research inspiration is listed in [references](docs/references.md). The clips are scripted performances, not an emotion classifier, manipulation policy, or sign-language translator. See [authoring and validation notes](docs/method.md) and [CHANGELOG.md](CHANGELOG.md).
+Use [CITATION.cff](CITATION.cff) when citing this release. Research inspiration is listed in [references](docs/references.md). The library contains eight recorded motion trajectories for playback and adaptation. See [authoring and validation notes](docs/method.md) and [CHANGELOG.md](CHANGELOG.md).
