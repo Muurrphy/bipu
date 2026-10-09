@@ -64,7 +64,7 @@ Files must remain under `sound_root`; contents are verified before playback. Gro
 
 ## Optional Jev and Telegram
 
-The current local build works without either credential. Provider and backend are always shown on the page. Jev has passed live API checks on the creator’s installation; Telegram still has offline contract tests only. Neither implies physical robot validation.
+The current local build works without either credential. Provider and backend are always shown on the page. On the creator’s installation, a real allowlisted private Telegram message has passed through Jev to a motion and sound choice in local preview (2026-10-09). This does not imply physical robot validation.
 
 ```sh
 bipu --config config.local.json configure

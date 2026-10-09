@@ -15,7 +15,7 @@ So far, I’ve only tested it on my own SO-101. Other setups will need some adju
 
 ## Bipu — local runtime (development)
 
-This project is growing into **Bipu**, a nonverbal robot pet. Pet mode responds to messages and idle time; choreography mode plays a fixed sequence of the recorded motions and chosen calls. The local control page works without an API key. Jev has been checked with live API calls; Telegram awaits setup and hardware transitions still need physical review.
+This project is growing into **Bipu**, a nonverbal robot pet. Pet mode responds to messages and idle time; choreography mode plays a fixed sequence of the recorded motions and chosen calls. The local control page works without an API key. Jev and Telegram have been verified together using a real private message and local preview. Hardware transitions still need physical review.
 
 ```sh
 python -m pip install .

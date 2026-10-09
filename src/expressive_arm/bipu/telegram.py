@@ -68,6 +68,7 @@ class TelegramBridge:
                 detail="Cannot initialize Telegram; check local configuration",
             )
             return
+        self.engine.log("telegram_ready", allowed_private_chats=len(self.allowed))
         while not self.stop_event.is_set():
             try:
                 response = self.request(
