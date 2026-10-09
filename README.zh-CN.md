@@ -101,4 +101,4 @@ SO-101 的上游社区入口见 [官方硬件仓库](https://github.com/TheRobot
 
 程序、文档文字和 JSON / JSONL 动作数据采用 [MIT 许可](LICENSE)。可以修改、再发布或用于商业项目，需保留许可声明。仓库中的照片及链接中的实拍视频由刘美辰保留版权，**不属于 MIT 许可范围**，具体见 [影像许可说明](docs/media-license.md)。
 
-引用方式见 [CITATION.cff](CITATION.cff)，研究参考见 [references.md](docs/references.md)。本项目提供脚本化表演，没有实现情绪识别、通用抓取策略或手语翻译。[动作制作与验证说明](docs/method.md)和 [更新记录](CHANGELOG.md)提供进一步信息。
+引用方式见 [CITATION.cff](CITATION.cff)，研究参考见 [references.md](docs/references.md)。这里提供八条录制好的动作轨迹，供回放或改编。[动作制作与验证说明](docs/method.md)和 [更新记录](CHANGELOG.md)提供进一步信息。
