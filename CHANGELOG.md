@@ -1,10 +1,13 @@
 # Changelog
 
-## 0.3.0.dev0 — Unreleased
+## 0.3.0b1 — 2026-10-09
 
 - Add Bipu pet policy, persisted mood/energy, idle scheduling, local messaging and cancellable motion queue.
 - Add a localhost control panel, grouped external sound library, score editor and validated choreography playback.
-- Add optional Jev choice and allowlisted inbound Telegram adapters; live credential tests pending.
+- Add Jev choice and allowlisted inbound Telegram adapters. Real private Telegram text through Jev to local preview verified on 2026-10-09.
+- Separate message-understanding confidence from sampling among equally suitable permitted calls; include recent interaction context.
+- Rename the public project to Bipu, preserving the Python package and original CLI for compatibility.
+- Present pet-mode and octopus choreography films through stable demonstration links.
 - Add opt-in existing-controller adapter, reviewed-transition gate and offline protocol checks. No physical hardware validation in this pass.
 - Preserve all eight motion files and existing authoring tools.
 

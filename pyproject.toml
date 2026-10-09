@@ -4,20 +4,20 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "expressive-arm"
-version = "0.3.0.dev0"
-description = "Eight human-choreographed SO-101 expressions, motion data and recording tools"
+version = "0.3.0b1"
+description = "Bipu: a Jev-powered robot pet with recorded SO-101 motions and choreography tools"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [{name = "Meichen Liu (Murphy)"}]
-keywords = ["robotics", "human-robot-interaction", "choreography", "SO-101"]
+keywords = ["robotics", "human-robot-interaction", "choreography", "SO-101", "Jev", "Telegram", "robot-pet"]
 dependencies = []
 
 [project.urls]
-Repository = "https://github.com/Muurrphy/expressive-arm"
-Issues = "https://github.com/Muurrphy/expressive-arm/issues"
-Changelog = "https://github.com/Muurrphy/expressive-arm/blob/main/CHANGELOG.md"
+Repository = "https://github.com/Muurrphy/bipu"
+Issues = "https://github.com/Muurrphy/bipu/issues"
+Changelog = "https://github.com/Muurrphy/bipu/blob/main/CHANGELOG.md"
 Demonstrations = "https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/"
 
 [project.scripts]

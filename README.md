@@ -1,29 +1,44 @@
-# Bipu / Expressive Arm
+# Bipu
 
-A little SO-101 toy that expresses emotions through movement.
+A little robot pet powered by [Jev](https://docs.typesafe.ai/introduction/quickstart). It answers with movement and electronic calls.
 
-[中文 README](README.zh-CN.md) · [Watch the demonstrations](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/) · [Download v0.2.0](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0)
+[中文 README](README.zh-CN.md) · [Watch Bipu](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=pet) · [Download 0.3 beta](https://github.com/Muurrphy/bipu/releases/tag/v0.3.0b1)
 
-[![Offline checks](https://github.com/Muurrphy/expressive-arm/actions/workflows/tests.yml/badge.svg)](https://github.com/Muurrphy/expressive-arm/actions/workflows/tests.yml)
+[![Offline checks](https://github.com/Muurrphy/bipu/actions/workflows/tests.yml/badge.svg)](https://github.com/Muurrphy/bipu/actions/workflows/tests.yml)
 [![License: MIT](https://img.shields.io/badge/code%20%26%20motion%20data-MIT-blue.svg)](LICENSE)
 
-![Eight expressions performed on a SO-101](docs/eight-expressions.jpg)
+I found Apple's [ELEGNT lamp robot](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement) really cute. I had an SO-101 at home and wanted to try making a little toy of my own. Bipu grew from eight recorded expressions into a pet that can react to messages. I hope it adds a little fun to playing with robot arms.
 
-I found Apple's [ELEGNT lamp robot](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement) really cute. I had an SO-101 at home and wanted to try something similar, just for fun. This little toy uses movement to express eight emotions. I’m sharing the trajectories and recording tools in case they add a bit of fun to someone else’s robot arm.
+An off-screen person sends a message or puts a couple of blocks into Bipu's small world. Bipu does not speak words; a movement and a short call are its reply.
 
-So far, I’ve only tested it on my own SO-101. Other setups will need some adjustment.
+## Two ways to use Bipu
 
-## Bipu — local runtime (development)
+| | Pet mode | Choreography mode |
+| --- | --- | --- |
+| Input | Telegram or local messages, plus time since the last interaction | A timeline of recorded motions and chosen sounds |
+| Behavior | Jev interprets the message within local rules and selects an allowed response; Bipu can also wait or become sleepy | Play a repeatable sequence for a film, installation or your own application |
+| Demonstration | [Bipu's small world](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=pet) | [The octopus scene](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=choreography) |
 
-This project is growing into **Bipu**, a nonverbal robot pet. Pet mode responds to messages and idle time; choreography mode plays a fixed sequence of the recorded motions and chosen calls. The local control page works without an API key. Jev and Telegram have been verified together using a real private message and local preview. Hardware transitions still need physical review.
+The pet film was edited from recorded performances with a composed message-and-sound sequence. The octopus scene is a scripted multi-device performance. A real private Telegram message has separately been verified through Jev to a motion and call in local preview. The eight individual motions have been replayed on the author's SO-101; physical transitions for autonomous pet mode still need review.
+
+## Try it on your computer
 
 ```sh
+git clone https://github.com/Muurrphy/bipu.git
+cd bipu
+python -m venv .venv
+source .venv/bin/activate  # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install .
 bipu serve --open
 ```
 
-[Runtime setup and behavior](docs/bipu.md) · [中文使用说明](docs/bipu.zh-CN.md). Starts paused in preview mode; no serial connection on startup. Existing motion tools below remain available. The v0.2.0 release linked above predates this unreleased runtime.
+Starts paused in preview mode. The default local rules work without an API key. To use Jev, configure a TypeSafe key locally; Telegram additionally needs your own bot token and private chat allowlist. No serial connection opens at startup.
 
+[Runtime setup and behavior](docs/bipu.md) · [中文使用说明](docs/bipu.zh-CN.md) · [Example score](examples/bipu-score.json)
+
+The package includes eight motion trajectories and a grouped sound index. Audio files and personal films are not bundled; point it to your own licensed assets or use silent preview. The Python package and original `expressive-arm` command retain their names for compatibility; the pet command is `bipu`.
+
+![Eight expressions performed on a SO-101](docs/eight-expressions.jpg)
 
 ## What you can use it for
 
@@ -52,8 +67,8 @@ The durations above describe motion data. Edited films have different durations 
 Python 3.10 or later. The offline package has no runtime dependencies and does not access serial ports.
 
 ```sh
-git clone https://github.com/Muurrphy/expressive-arm.git
-cd expressive-arm
+git clone https://github.com/Muurrphy/bipu.git
+cd bipu
 python -m venv .venv
 # macOS / Linux:
 source .venv/bin/activate
@@ -67,7 +82,7 @@ expressive-arm export curious --output curious.csv
 expressive-arm crop curious --start 2 --end 8 --output curious-cut.jsonl
 ```
 
-The [release](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0) also provides a wheel, source distribution, full repository ZIP, and SHA-256 checksums. To use a downloaded wheel: `python -m pip install ./expressive_arm-0.2.0-py3-none-any.whl`. This package has not been published to PyPI.
+The [release](https://github.com/Muurrphy/bipu/releases/tag/v0.3.0b1) also provides a wheel, source distribution, full repository ZIP, and SHA-256 checksums. To use a downloaded wheel: `python -m pip install ./expressive_arm-0.3.0b1-py3-none-any.whl`. This package has not been published to PyPI.
 
 In Python:
 
@@ -96,9 +111,9 @@ Start with the [hardware notes](docs/hardware.md), then the [recording guide](do
 
 ## Contributing and support
 
-[CONTRIBUTING.md](CONTRIBUTING.md) explains development, motion submissions, and hardware ports. Use [Discussions](https://github.com/Muurrphy/expressive-arm/discussions) for usage questions and demonstrations; use [Issues](https://github.com/Muurrphy/expressive-arm/issues) for reproducible bugs or concrete proposals. Contributions to other arm models should include an adapter, configuration, and a test report.
+[CONTRIBUTING.md](CONTRIBUTING.md) explains development, motion submissions, and hardware ports. Use [Discussions](https://github.com/Muurrphy/bipu/discussions) for usage questions and demonstrations; use [Issues](https://github.com/Muurrphy/bipu/issues) for reproducible bugs or concrete proposals. Contributions to other arm models should include an adapter, configuration, and a test report.
 
-For the upstream SO-101 / LeRobot community, see the [official hardware repository](https://github.com/TheRobotStudio/SO-ARM100) and its [LeRobot Discord link](https://discord.gg/ggrqhPTsMe). Expressive Arm is an independent project, not an official LeRobot component.
+For the upstream SO-101 / LeRobot community, see the [official hardware repository](https://github.com/TheRobotStudio/SO-ARM100) and its [LeRobot Discord link](https://discord.gg/ggrqhPTsMe). Bipu is an independent project, not an official LeRobot component.
 
 ## License, attribution and scope
 

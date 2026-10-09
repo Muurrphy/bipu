@@ -4,7 +4,7 @@ Contributions are welcome for offline tools, new motion clips, documentation and
 
 ## Questions and proposals
 
-Use [Discussions](https://github.com/Muurrphy/expressive-arm/discussions) for usage questions and demonstrations. Use an issue for a reproducible bug or a specific change proposal. Discuss a substantial hardware port before committing to a large implementation.
+Use [Discussions](https://github.com/Muurrphy/bipu/discussions) for usage questions and demonstrations. Use an issue for a reproducible bug or a specific change proposal. Discuss a substantial hardware port before committing to a large implementation.
 
 ## Development
 

@@ -1,26 +1,41 @@
-# Expressive Arm · 机械臂情绪表达
+# Bipu
 
-一个用动作表达情绪的 SO-101 小玩具。
+基于 [Jev](https://docs.typesafe.ai/introduction/quickstart) 的机械小宠物，用动作和电子短叫回应消息。
 
-[English README](README.md) · [观看实拍](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/) · [下载 v0.2.0](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0)
+[English README](README.md) · [看 Bipu](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=pet) · [下载 0.3 测试版](https://github.com/Muurrphy/bipu/releases/tag/v0.3.0b1)
 
-![SO-101 的八种表达](docs/eight-expressions.jpg)
+我觉得苹果的 [ELEGNT 台灯机器人](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement)很可爱，家里刚好有一台 SO-101，也想试着做个小玩具。Bipu 从八条动作慢慢有了根据消息作反应的宠物模式，希望能给玩机械臂的人添一点乐趣。
 
-我觉得苹果的 [ELEGNT 台灯机器人](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement)很可爱，家里刚好有一台 SO-101，也想试着做一个。于是做了这个用动作表达情绪的小玩具，只是为了好玩，也希望给其他机械臂玩家添一点乐趣。这里分享八条动作的轨迹和录制工具，方便大家参考或改编。
+画外的人往它的小世界里放东西，也给它发消息。比如“给你两块积木，自己玩一会儿”，它用动作和短叫回应，不说人话。
 
-目前只在我自己的 SO-101 上试过，其他设备需要按各自的配置调整。
+## 两种玩法
 
-## Bipu 本地系统（开发版）
+| | 宠物模式 | 编排模式 |
+| --- | --- | --- |
+| 输入 | Telegram 或本地消息，以及多久没互动 | 录好的动作与声音时间线 |
+| 行为 | Jev 结合消息和近期状态，从规则允许的动作与叫声中选择；空闲时也可等待或入睡 | 按固定时间线播放，方便拍视频或接到自己的应用 |
+| 视频 | [Bipu 的小世界](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=pet) | [章鱼场景联动](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=choreography) |
 
-项目现在叫 **Bipu**。新增宠物模式和编排模式：前者根据消息和闲置时间选动作，后者按固定脚本播放。没有 API key 也能运行本地规则。Jev 与 Telegram 已通过真实私聊消息到本地预览的联调；实机动作衔接还需要现场验证。
+宠物短片用已有实拍加聊天框和叫声编排，章鱼片按预设时间线联动。真实 Telegram 私聊经过 Jev 选择动作和声音的链路已在本地预览验证。八条单独动作曾在我的 SO-101 上回放，宠物模式的实机动作衔接还需要现场验证。
+
+## 先在电脑上试
 
 ```sh
+git clone https://github.com/Muurrphy/bipu.git
+cd bipu
+python -m venv .venv
+source .venv/bin/activate  # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install .
 bipu serve --open
 ```
 
-[本地使用说明](docs/bipu.zh-CN.md) · [English runtime docs](docs/bipu.md)。启动默认暂停、仅预览，不连接串口。下方原有动作工具继续保留。页面上的 v0.2.0 发布包不包含这次尚未发布的新内核。
+启动后默认暂停并使用预览。没有密钥时可先用本地规则，使用 Jev 需在本机配置 TypeSafe key，接 Telegram 还需自己的 bot token 和私人账号允许列表。启动不会连接串口。
 
+[完整使用说明](docs/bipu.zh-CN.md) · [English runtime docs](docs/bipu.md) · [编排示例](examples/bipu-score.json)
+
+安装包包含八条轨迹和分组声音索引，音频与个人视频不在安装包内，可接自己的合法素材或先静音预览。Python 包和原有 `expressive-arm` 命令保留名称以兼容旧用法，宠物入口是 `bipu`。
+
+![SO-101 的八种表达](docs/eight-expressions.jpg)
 
 ## 可以用来做什么
 
@@ -49,8 +64,8 @@ bipu serve --open
 需要 Python 3.10 或更新版本。离线包没有运行时依赖，不会打开串口。
 
 ```sh
-git clone https://github.com/Muurrphy/expressive-arm.git
-cd expressive-arm
+git clone https://github.com/Muurrphy/bipu.git
+cd bipu
 python -m venv .venv
 # macOS / Linux：
 source .venv/bin/activate
@@ -64,7 +79,7 @@ expressive-arm export curious --output curious.csv
 expressive-arm crop curious --start 2 --end 8 --output curious-cut.jsonl
 ```
 
-[版本发布页](https://github.com/Muurrphy/expressive-arm/releases/tag/v0.2.0)提供 wheel 安装包、源码包、完整仓库 ZIP 和 SHA-256 校验文件。下载 wheel 后可运行 `python -m pip install ./expressive_arm-0.2.0-py3-none-any.whl`。目前没有发布到 PyPI。
+[版本发布页](https://github.com/Muurrphy/bipu/releases/tag/v0.3.0b1)提供 wheel 安装包、源码包、完整仓库 ZIP 和 SHA-256 校验文件。下载 wheel 后可运行 `python -m pip install ./expressive_arm-0.3.0b1-py3-none-any.whl`。目前没有发布到 PyPI。
 
 Python 示例：
 
@@ -93,7 +108,7 @@ first_target = rows[0]["action"]
 
 ## 贡献与交流
 
-开发和提交动作的方法见 [CONTRIBUTING.md](CONTRIBUTING.md)。使用问题和演示可放在 [Discussions](https://github.com/Muurrphy/expressive-arm/discussions)，可复现的错误或具体改进建议请提交 [Issue](https://github.com/Muurrphy/expressive-arm/issues)。其他型号的适配应附上驱动接入代码、配置和测试记录。
+开发和提交动作的方法见 [CONTRIBUTING.md](CONTRIBUTING.md)。使用问题和演示可放在 [Discussions](https://github.com/Muurrphy/bipu/discussions)，可复现的错误或具体改进建议请提交 [Issue](https://github.com/Muurrphy/bipu/issues)。其他型号的适配应附上驱动接入代码、配置和测试记录。
 
 SO-101 的上游社区入口见 [官方硬件仓库](https://github.com/TheRobotStudio/SO-ARM100)及其提供的 [LeRobot Discord](https://discord.gg/ggrqhPTsMe)。本项目独立维护，不是 LeRobot 的官方组件。
 

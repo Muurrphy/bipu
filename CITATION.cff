@@ -1,15 +1,15 @@
 cff-version: 1.2.0
 message: "If you use this software or motion data, please cite this release."
-title: "Expressive Arm: Eight SO-101 Motion Expressions"
+title: "Bipu: A Jev-powered Robot Pet and Choreography Toolkit"
 type: software
 authors:
   - family-names: Liu
     given-names: Meichen
-version: 0.2.0
-date-released: '2026-10-07'
+version: 0.3.0b1
+date-released: '2026-10-09'
 license: MIT
-url: "https://github.com/Muurrphy/expressive-arm"
-repository-code: "https://github.com/Muurrphy/expressive-arm"
+url: "https://github.com/Muurrphy/bipu"
+repository-code: "https://github.com/Muurrphy/bipu"
 keywords:
   - robotics
   - human-robot interaction
