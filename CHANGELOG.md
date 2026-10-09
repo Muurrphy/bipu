@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.3.0.dev0 — Unreleased
+
+- Add Bipu pet policy, persisted mood/energy, idle scheduling, local messaging and cancellable motion queue.
+- Add a localhost control panel, grouped external sound library, score editor and validated choreography playback.
+- Add optional Jev choice and allowlisted inbound Telegram adapters; live credential tests pending.
+- Add opt-in existing-controller adapter, reviewed-transition gate and offline protocol checks. No physical hardware validation in this pass.
+- Preserve all eight motion files and existing authoring tools.
+
 ## 0.2.0 — 2026-10-07
 
 - English and Chinese READMEs with use cases, compatibility status, installation and direct demonstration links.

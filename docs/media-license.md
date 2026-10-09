@@ -10,3 +10,7 @@ It does not cover these visual materials:
 These photographs and films are © 2026 Meichen Liu. Viewing the demonstrations does not grant permission to redistribute, modify, train models on, or commercially reuse them. Ask through a repository Discussion for permission for a specific use. An ordinary link to the demonstration page may be shared.
 
 No Apple source code, illustrations or video assets are distributed in this repository. Third-party dependencies and websites retain their own licensing terms.
+
+## Bipu audio index
+
+The runtime includes metadata and checksums for the creator's selected calls. It does not include the audio files or grant an audio redistribution license. Generated calls and local footage stay outside this repository pending a separate asset release review. Users may configure their own sound manifest and appropriately licensed files.

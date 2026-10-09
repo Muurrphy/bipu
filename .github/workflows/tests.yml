@@ -32,9 +32,10 @@ jobs:
           python -m venv /tmp/arm-wheel
           /tmp/arm-wheel/bin/python -m pip install dist/*.whl
           cd /tmp
+          /tmp/arm-wheel/bin/bipu check
           /tmp/arm-wheel/bin/expressive-arm validate
           /tmp/arm-wheel/bin/expressive-arm export curious --output curious.csv
-          /tmp/arm-wheel/bin/python -c 'from expressive_arm import __version__; assert __version__ == "0.2.0"'
+          /tmp/arm-wheel/bin/python -c 'from expressive_arm import __version__; assert __version__ == "0.3.0.dev0"'
       - name: Check installed source distribution outside the source tree
         run: |
           python -m venv /tmp/arm-source

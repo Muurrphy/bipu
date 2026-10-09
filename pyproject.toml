@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "expressive-arm"
-version = "0.2.0"
+version = "0.3.0.dev0"
 description = "Eight human-choreographed SO-101 expressions, motion data and recording tools"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -22,9 +22,12 @@ Demonstrations = "https://muurrphy.github.io/desktop-robot-murphy-demo/expressio
 
 [project.scripts]
 expressive-arm = "expressive_arm.cli:main"
+bipu = "expressive_arm.bipu.cli:main"
 
 [tool.setuptools.packages.find]
 where = ["src"]
 
 [tool.setuptools.package-data]
 expressive_arm = ["motions/*.jsonl", "motions/*.json"]
+
+"expressive_arm.bipu" = ["sounds.json", "web.html"]

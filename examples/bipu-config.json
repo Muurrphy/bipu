@@ -1,0 +1,9 @@
+{
+  "provider": "local_rules",
+  "idle_min": 45,
+  "idle_max": 90,
+  "sleep_after": 240,
+  "telegram_enabled": false,
+  "telegram_chat_ids": [],
+  "approved_transitions": []
+}

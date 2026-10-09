@@ -11,3 +11,6 @@ tools/recording/人工编舞/
 *.log
 *.env
 calibration/
+
+.bipu/
+config.local.json

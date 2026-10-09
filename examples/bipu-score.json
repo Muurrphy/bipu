@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "steps": [
+    {
+      "motion": "curious",
+      "wait_before": 0,
+      "sounds": []
+    },
+    {
+      "motion": "happy",
+      "wait_before": 3,
+      "sounds": []
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 include README.md README.zh-CN.md LICENSE CITATION.cff CHANGELOG.md CONTRIBUTING.md
 recursive-include docs *.md *.jpg
-recursive-include examples *.py
+recursive-include examples *.py *.json
 recursive-include tests *.py
 recursive-include tools/recording *.py *.json *.txt
 recursive-include src/expressive_arm/motions *.json *.jsonl
+recursive-include src/expressive_arm/bipu *.json *.html

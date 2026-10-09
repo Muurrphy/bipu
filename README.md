@@ -1,4 +1,4 @@
-# Expressive Arm
+# Bipu / Expressive Arm
 
 A little SO-101 toy that expresses emotions through movement.
 
@@ -12,6 +12,18 @@ A little SO-101 toy that expresses emotions through movement.
 I found Apple's [ELEGNT lamp robot](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement) really cute. I had an SO-101 at home and wanted to try something similar, just for fun. This little toy uses movement to express eight emotions. I’m sharing the trajectories and recording tools in case they add a bit of fun to someone else’s robot arm.
 
 So far, I’ve only tested it on my own SO-101. Other setups will need some adjustment.
+
+## Bipu — local runtime (development)
+
+This project is growing into **Bipu**, a nonverbal robot pet. Pet mode responds to messages and idle time; choreography mode plays a fixed sequence of the recorded motions and chosen calls. The local control page works without an API key. Jev and Telegram adapters are included but await live credential testing; hardware transitions still need physical review.
+
+```sh
+python -m pip install .
+bipu serve --open
+```
+
+[Runtime setup and behavior](docs/bipu.md) · [中文使用说明](docs/bipu.zh-CN.md). Starts paused in preview mode; no serial connection on startup. Existing motion tools below remain available. The v0.2.0 release linked above predates this unreleased runtime.
+
 
 ## What you can use it for
 

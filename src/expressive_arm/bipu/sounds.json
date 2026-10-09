@@ -1,0 +1,392 @@
+[
+  {
+    "id": "01_signature_a",
+    "label": "标志叫A",
+    "group": "signature",
+    "file": "已选声音/01_signature_a_标志叫A.wav",
+    "sha256": "38580b2c55de933c8a40f8e9bd0d40e2df062feb1d09a53a7d2a4cb77f24919d",
+    "duration_s": 1.48,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "09_disappointed",
+    "label": "失落",
+    "group": "disappointed",
+    "file": "已选声音/09_disappointed_失落.wav",
+    "sha256": "bc392ccedd04514a91d411ef874cc762856417b7399c6d0056e5908693b17560",
+    "duration_s": 2.2,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "18_toy_received",
+    "label": "收到玩具",
+    "group": "playful",
+    "file": "已选声音/18_toy_received_收到玩具.wav",
+    "sha256": "ff2549c46ed7b463a6c60d7d3cd18f522a0f318eceb5b2cabfda8ceea1b93528",
+    "duration_s": 2.0,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v3_B",
+    "label": "颗粒咕噜",
+    "group": "playful",
+    "file": "已选声音/v3_B_颗粒咕噜.wav",
+    "sha256": "c6798fbe75e0e7ba73fdfaf16f17a38c5e5afa460e992f9a30f4ea46239f8412",
+    "duration_s": 2.4,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v4_G",
+    "label": "数字碎语",
+    "group": "curious",
+    "file": "已选声音/v4_G_数字碎语.wav",
+    "sha256": "a47326577294c762b985c528a1b520b2af235f702443fbd31265ea336800c495",
+    "duration_s": 2.68,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v5_G1",
+    "label": "开心碎语",
+    "group": "happy",
+    "file": "已选声音/v5_G1_开心碎语.wav",
+    "sha256": "7f4b46872ba15b8ee6801a623cb8364c3aa44593f4bb4591a02a32d6e9087dad",
+    "duration_s": 2.76,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v5_G7",
+    "label": "G原声·轻快版",
+    "group": "happy",
+    "file": "已选声音/v5_G7_G原声·轻快版.wav",
+    "sha256": "551aaefb722c3fa5d2fe67312025b5877a371ab392b8811321f3926c151c3ee8",
+    "duration_s": 2.3309583333333332,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H01",
+    "label": "短短答应",
+    "group": "happy",
+    "file": "已选声音/v6_H01_短短答应.wav",
+    "sha256": "eb9e8dd8d7757a0e7bbd95e2ce795996403a2ecf46dc936e5890641bb265fb97",
+    "duration_s": 1.08,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H02",
+    "label": "开心接话",
+    "group": "happy",
+    "file": "已选声音/v6_H02_开心接话.wav",
+    "sha256": "3869bdb1659dfa7d75c6f226021297eaae2449a8ffef0410f6a9a011cdde5ca0",
+    "duration_s": 2.56,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H03",
+    "label": "得意咕噜",
+    "group": "happy",
+    "file": "已选声音/v6_H03_得意咕噜.wav",
+    "sha256": "2541c873fcbf33b15e1ec7fafdea730ef8bdc8206954ec3c35aa82769cad4174",
+    "duration_s": 2.2,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H04",
+    "label": "探一下",
+    "group": "curious",
+    "file": "已选声音/v6_H04_探一下.wav",
+    "sha256": "7c14f50498a60eac1cb1c1e979c67c0b2ce3d03236980be10da19e80a95dd5e1",
+    "duration_s": 1.2,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H05",
+    "label": "认真琢磨",
+    "group": "curious",
+    "file": "已选声音/v6_H05_认真琢磨.wav",
+    "sha256": "495bf6fb4107ddec67a8dd4e229c9dad854b591e9457195e049c78a114835d38",
+    "duration_s": 2.76,
+    "default": true,
+    "favorite": true
+  },
+  {
+    "id": "v6_H07",
+    "label": "欲言又止",
+    "group": "hesitant",
+    "file": "已选声音/v6_H07_欲言又止.wav",
+    "sha256": "6695df111a738c67ab8a7a8281f152a5ece44e86eb8f075ce36582c8af4e805a",
+    "duration_s": 1.08,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H08",
+    "label": "想了又想",
+    "group": "hesitant",
+    "file": "已选声音/v6_H08_想了又想.wav",
+    "sha256": "5d1f25ac98c37046f3aba2cdbe056b5986266c60f60c8f8af3e53cc66838afa9",
+    "duration_s": 3.0,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H10",
+    "label": "哼一下",
+    "group": "angry",
+    "file": "已选声音/v6_H10_哼一下.wav",
+    "sha256": "bcc0df9f92c3e3746d2a77c11a778ea06339e7218f34c90a7026a5a33c6210c0",
+    "duration_s": 0.88,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H11",
+    "label": "小声顶嘴",
+    "group": "angry",
+    "file": "已选声音/v6_H11_小声顶嘴.wav",
+    "sha256": "e6a54b60b2a3a693ffe490222a81c76821491a4aa7de67c188cedd47872bff39",
+    "duration_s": 2.28,
+    "default": true,
+    "favorite": true
+  },
+  {
+    "id": "v6_H12",
+    "label": "背过身嘟囔",
+    "group": "angry",
+    "file": "已选声音/v6_H12_背过身嘟囔.wav",
+    "sha256": "6974938befbd73e9f0412ac5c679035dbb74a3bb92d9ae6be69515cc11a6e29b",
+    "duration_s": 2.76,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H13",
+    "label": "低低回应",
+    "group": "disappointed",
+    "file": "已选声音/v6_H13_低低回应.wav",
+    "sha256": "5f32b2f407a8f2c978cdb5eae6c4a9b7174ca173306b52a4fd7c9e59c6497d56",
+    "duration_s": 1.2,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H16",
+    "label": "愣一下",
+    "group": "startled",
+    "file": "已选声音/v6_H16_愣一下.wav",
+    "sha256": "e3da039d87b9fbc8f6ea863c1fe5ba80128d762e939b8b18f85b0df0b6a13d27",
+    "duration_s": 0.88,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H17",
+    "label": "怎么回事",
+    "group": "startled",
+    "file": "已选声音/v6_H17_怎么回事.wav",
+    "sha256": "440c6e7a0bd5e147e75bc446caf385d6b6892c36b7a1239bfa34b8699a21afc1",
+    "duration_s": 2.48,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H18",
+    "label": "缓过神",
+    "group": "startled",
+    "file": "已选声音/v6_H18_缓过神.wav",
+    "sha256": "e8a4055550b142ebce1c041920b7ef569562314ddc005c5cc9d78db6a8356c11",
+    "duration_s": 2.2,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H19",
+    "label": "拿到玩具",
+    "group": "playful",
+    "file": "已选声音/v6_H19_拿到玩具.wav",
+    "sha256": "c3e7d81c02502d2437883dfdff34de6a71a4d8f113d32fb6b8091a213bb79e9b",
+    "duration_s": 1.28,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H20",
+    "label": "边玩边念叨",
+    "group": "playful",
+    "file": "已选声音/v6_H20_边玩边念叨.wav",
+    "sha256": "fc8530fe1f1e9645b03be27194e9bcfa09d11359c6c10082d430af78380d80dd",
+    "duration_s": 3.28,
+    "default": true,
+    "favorite": true
+  },
+  {
+    "id": "v6_H21",
+    "label": "快来看",
+    "group": "playful",
+    "file": "已选声音/v6_H21_快来看.wav",
+    "sha256": "e169d5771e0753fa89366ff4ca07bbd0e5a3efaadc60977737cb2847e6eef45f",
+    "duration_s": 2.4,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H22",
+    "label": "困了应一声",
+    "group": "sleepy",
+    "file": "已选声音/v6_H22_困了应一声.wav",
+    "sha256": "1751817f8161786607c2ae435055d5dd648647655a6e5a499d889fc5935858f6",
+    "duration_s": 1.48,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H23",
+    "label": "越说越困",
+    "group": "sleepy",
+    "file": "已选声音/v6_H23_越说越困.wav",
+    "sha256": "633b032b4a7307dc813bdb3a9aff72b1c6324eb829e2c9b121a3755ea4cfd712",
+    "duration_s": 3.56,
+    "default": true,
+    "favorite": false
+  },
+  {
+    "id": "v6_H24",
+    "label": "窝着睡着",
+    "group": "sleepy",
+    "file": "已选声音/v6_H24_窝着睡着.wav",
+    "sha256": "f48e4a8e3adabe5b46d64aa829454368bc905219929f3521e3809a43d3ffa68c",
+    "duration_s": 3.2,
+    "default": true,
+    "favorite": true
+  },
+  {
+    "id": "J01",
+    "label": "短答",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J01.wav",
+    "sha256": "d7e1c092835746e5e28bed1badbcfe5aae722283bec02ca8da09c919b6c2ebaf",
+    "duration_s": 0.83,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J02",
+    "label": "碎碎念",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J02.wav",
+    "sha256": "f968d56f8aeed2c1484a68f10335502b59f8f2841a136cbafbe2a9afa9cfda1e",
+    "duration_s": 1.53,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J03",
+    "label": "停一下再答",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J03.wav",
+    "sha256": "369bd0eb196c5391a046e736b2675d4486127473bca7fe8201d8ad5a2042c463",
+    "duration_s": 1.6,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J04",
+    "label": "两声嘟囔",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J04.wav",
+    "sha256": "612c3fafb27790d7f95b77e64dccd84d2841ee9c5a4776d648476f02916668af",
+    "duration_s": 0.932,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J05",
+    "label": "轻轻顶嘴",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J05.wav",
+    "sha256": "f3e5540f96ecda8a50652e6017420c743c0273dc75a9a0f9c326db95a2246346",
+    "duration_s": 1.722,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J06",
+    "label": "慢慢收声",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J06.wav",
+    "sha256": "e5b54778087f2de01870bf937d79ffaaef44f5fc8dae4b1962e22f7e31077bb0",
+    "duration_s": 1.796,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J07",
+    "label": "咔哒回应",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J07.wav",
+    "sha256": "3d3fd97928c2a137c02ae6b3d283b0b0594bbf792c6985b68a5bfd8a1aa540fa",
+    "duration_s": 0.83,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J08",
+    "label": "摆弄零件",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J08.wav",
+    "sha256": "c3c81de69a89cdce261908bc38a0b8f7d5f57ed13c9f01fb08ddbc970679391e",
+    "duration_s": 1.53,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J09",
+    "label": "探探停停",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J09.wav",
+    "sha256": "a3e4ca33af96b15e7179434e5b513b526bd1f2b0abf79f5a2dc3924351445e01",
+    "duration_s": 1.6,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J10",
+    "label": "小马达启动",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J10.wav",
+    "sha256": "148289da4ba8f9aa073405ea4701b20ea1a5772f67451785c60aa7dfcbd5654e",
+    "duration_s": 1.161,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J11",
+    "label": "满足的咕噜",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J11.wav",
+    "sha256": "9f7a0964ab5a7a9827ec1524924b4603d30e215ba7ef34c90202026cb86c02df",
+    "duration_s": 2.154,
+    "default": false,
+    "favorite": false
+  },
+  {
+    "id": "J12",
+    "label": "渐渐犯困",
+    "group": "backup",
+    "file": "版本/v7_2026-10-09_低中频合成/J12.wav",
+    "sha256": "28749498e75334c88c4698607cc02bd7af7eaefc2500dd62a966dd10369ce644",
+    "duration_s": 2.237,
+    "default": false,
+    "favorite": false
+  }
+]
