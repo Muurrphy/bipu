@@ -64,14 +64,14 @@ Files must remain under `sound_root`; contents are verified before playback. Gro
 
 ## Optional Jev and Telegram
 
-The current local build works without either credential. Provider and backend are always shown on the page. Jev and Telegram integration code has offline contract tests; live services have not been validated for this installation.
+The current local build works without either credential. Provider and backend are always shown on the page. Jev has passed live API checks on the creator’s installation; Telegram still has offline contract tests only. Neither implies physical robot validation.
 
 ```sh
 bipu --config config.local.json configure
 bipu --config config.local.json serve --provider jev --open
 ```
 
-`configure` prompts privately for a TypeSafe key and optional Telegram bot token. Environment variables `TYPESAFE_API_KEY` / `TELEGRAM_BOT_TOKEN` override configured values. Jev uses the official [TypeSafe choice API](https://docs.typesafe.ai/introduction/quickstart), model `jev-latest`. It classifies a message then selects from the locally allowed motion/sound pairs. It cannot write joint angles, invent a trajectory, or mark props ready. Uncertain, malformed, failed or rate-limited responses cause waiting and a visible error, not a silent switch to local rules. Requests are limited locally to 12 per minute; only event text and software state are sent.
+`configure` prompts privately for a TypeSafe key and optional Telegram bot token. Environment variables `TYPESAFE_API_KEY` / `TELEGRAM_BOT_TOKEN` override configured values. Jev uses the official [TypeSafe choice API](https://docs.typesafe.ai/introduction/quickstart), model `jev-latest`. It classifies a message then selects from the locally allowed motion/sound pairs. It cannot write joint angles, invent a trajectory, or mark props ready. Uncertain message interpretation, malformed responses, failed requests or rate limits cause waiting and a visible error, not a silent switch to local rules. The interpreter receives recent interaction context. For expressive variation among already permitted performances, the model’s validated probability distribution is sampled; low confidence between equally valid calls does not cancel a known emotion. This differs from semantic uncertainty about the message. Requests are limited locally to 12 per minute; only event text and software state are sent.
 
 For Telegram, configure a token and explicit private chat IDs, then set `telegram_enabled:true`. The [getUpdates bridge](https://core.telegram.org/bots/api#getupdates) receives text from those private chats only, skips the existing backlog at startup, and rejects stale messages. `/stop` stops the runtime. It sends no chat replies and cannot enable hardware or mark props ready. Start pet mode locally first. Only one poller may use a bot at a time; an existing webhook must be removed by its operator before polling. No webhook is removed automatically.
 

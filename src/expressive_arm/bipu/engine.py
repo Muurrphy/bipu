@@ -278,11 +278,24 @@ class Engine:
                 self.current = None
 
     def react(self, event):
-        intent = (
-            self.provider.classify(event["text"])
-            if event["kind"] == "message"
-            else "idle"
-        )
+        with self.lock:
+            interpretation_context = {
+                "pet": self.state.public(time.time()),
+                "recent": [
+                    e
+                    for e in list(self.events)[-16:]
+                    if e["kind"] in ("message", "decision", "motion_finished")
+                ][-8:],
+            }
+        if event["kind"] == "message":
+            contextual = getattr(self.provider, "classify_with_context", None)
+            intent = (
+                contextual(event["text"], interpretation_context)
+                if contextual
+                else self.provider.classify(event["text"])
+            )
+        else:
+            intent = "idle"
         if self.cancel.is_set():
             raise InterruptedError()
         with self.lock:
@@ -316,6 +329,7 @@ class Engine:
         self.log(
             "decision",
             provider=self.provider.name,
+            model=getattr(self.provider, "last_model", None),
             intent=intent,
             motion=chosen["motion"],
             sound=chosen["sound"],

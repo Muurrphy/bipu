@@ -147,6 +147,44 @@ class JevContract(unittest.TestCase):
             with self.assertRaises(DecisionError):
                 Jev("test-only", transport=lambda _, a=answer: a).classify("hi")
 
+    def test_equally_valid_calls_do_not_block_a_known_emotion(self):
+        answer = self.answer("happy:a", 0.1)
+        answer["answers"]["decision"]["probabilities"] = {
+            "happy:a": 0.5,
+            "happy:b": 0.5,
+        }
+        model = Jev("test-only", transport=lambda _: answer)
+        result = model.choose(
+            {},
+            {
+                "happy:a": {"motion": "happy", "sound": "a"},
+                "happy:b": {"motion": "happy", "sound": "b"},
+            },
+        )
+        self.assertIn(result, ("happy:a", "happy:b"))
+
+    def test_invalid_performance_distribution_is_rejected(self):
+        answer = self.answer("wait", 1)
+        answer["answers"]["decision"]["probabilities"] = {"wait": 1, "invented": 0}
+        with self.assertRaises(DecisionError):
+            Jev("test-only", transport=lambda _: answer).choose(
+                {}, {"wait": {"motion": "wait", "sound": None}}
+            )
+
+    def test_interpretation_receives_recent_context(self):
+        payload = []
+
+        def transport(body):
+            payload.append(body)
+            return self.answer()
+
+        Jev("test-only", transport=transport).classify_with_context(
+            "还不错", {"recent": ["previous reaction"]}
+        )
+        self.assertEqual(
+            json.loads(payload[0]["state"])["context"]["recent"], ["previous reaction"]
+        )
+
     def test_network_error_does_not_leak_key(self):
         def broken(_):
             raise RuntimeError("test-secret")
