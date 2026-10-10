@@ -1,6 +1,6 @@
 # Bipu
 
-A little robot pet powered by [Jev](https://docs.typesafe.ai/introduction/quickstart). It answers with movement and electronic calls.
+An SO-101 robot pet powered by [Jev](https://docs.typesafe.ai/introduction/quickstart). Send messages through Telegram or the local interface; Bipu responds with recorded movement and electronic calls. It also has a choreography mode for arranging motions and sounds.
 
 [中文 README](README.zh-CN.md) · [Watch Bipu](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=pet) · [Download 0.3 beta](https://github.com/Muurrphy/bipu/releases/tag/v0.3.0b1)
 
@@ -8,8 +8,6 @@ A little robot pet powered by [Jev](https://docs.typesafe.ai/introduction/quicks
 [![License: MIT](https://img.shields.io/badge/code%20%26%20motion%20data-MIT-blue.svg)](LICENSE)
 
 I found Apple's [ELEGNT lamp robot](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement) really cute. I had an SO-101 at home and wanted to try making a little toy of my own. Bipu grew from eight recorded expressions into a pet that can react to messages. I hope it adds a little fun to playing with robot arms.
-
-An off-screen person sends a message or puts a couple of blocks into Bipu's small world. Bipu does not speak words; a movement and a short call are its reply.
 
 ## Two ways to use Bipu
 

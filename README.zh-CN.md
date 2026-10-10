@@ -1,12 +1,10 @@
 # Bipu
 
-基于 [Jev](https://docs.typesafe.ai/introduction/quickstart) 的机械小宠物，用动作和电子短叫回应消息。
+基于 SO-101 和 [Jev](https://docs.typesafe.ai/introduction/quickstart) 的 Bipu。通过 Telegram 或本地界面发送消息，由 Jev 在规则范围内选择动作和电子短叫；也可以用编排模式组合动作与声音。
 
 [English README](README.md) · [看 Bipu](https://muurrphy.github.io/desktop-robot-murphy-demo/expressions/?mode=pet) · [下载 0.3 测试版](https://github.com/Muurrphy/bipu/releases/tag/v0.3.0b1)
 
 我觉得苹果的 [ELEGNT 台灯机器人](https://machinelearning.apple.com/research/elegnt-expressive-functional-movement)很可爱，家里刚好有一台 SO-101，也想试着做个小玩具。Bipu 从八条动作慢慢有了根据消息作反应的宠物模式，希望能给玩机械臂的人添一点乐趣。
-
-画外的人往它的小世界里放东西，也给它发消息。比如“给你两块积木，自己玩一会儿”，它用动作和短叫回应，不说人话。
 
 ## 两种玩法
 
